@@ -11,8 +11,10 @@ st.title("Dashboard de Ventas")
 st.write("Cargando datos desde el archivo Excel...")
 
 # Asegúrate de que este archivo exista
-df = pd.read_excel("D:/Power BI + AI/Informe_Ventas.xlsx", engine='openpyxl')
+from pathlib import Path
 
+ruta = Path("Informe_Ventas.xlsx")
+df = pd.read_excel(ruta, engine="openpyxl")
 st.success("Datos cargados correctamente.")
 
 # Convertir fecha
